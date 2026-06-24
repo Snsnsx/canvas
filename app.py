@@ -312,6 +312,27 @@ async def get_tools():
 async def get_voice():
     return FileResponse(os.path.join(BASE, "voice.js"), media_type="application/javascript")
 
+# --- Иконки (favicon) ---
+# Отдаём только разрешённые файлы из корня проекта.
+ICONS = {
+    "favicon.svg": "image/svg+xml",
+    "favicon.ico": "image/x-icon",
+    "favicon-16.png": "image/png",
+    "favicon-32.png": "image/png",
+    "favicon-48.png": "image/png",
+    "apple-touch-icon.png": "image/png",
+}
+
+@app.get("/{icon}")
+async def get_icon(icon: str):
+    media = ICONS.get(icon)
+    if media is None:
+        raise HTTPException(status_code=404, detail="Not found")
+    path = os.path.join(BASE, icon)
+    if not os.path.exists(path):
+        raise HTTPException(status_code=404, detail="Not found")
+    return FileResponse(path, media_type=media)
+
 # --- REST APIs ---
 
 @app.get("/api/board/{bid}")

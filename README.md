@@ -114,6 +114,12 @@ o-canvas/
 ├── network.js        # WebSocket-клиент синхронизации
 ├── voice.js          # голосовые звонки (WebRTC mesh)
 ├── app.py            # сервер FastAPI: статика, REST, WebSocket, сохранение досок
+├── favicon.svg       # иконка вкладки (масштабируемая, основной источник)
+├── favicon.ico       # иконка для браузеров без поддержки SVG (16/32/48)
+├── favicon-16.png    # растровые иконки
+├── favicon-32.png
+├── favicon-48.png
+├── apple-touch-icon.png  # иконка для iOS (180×180)
 ├── requirements.txt  # зависимости Python
 ├── run_colab.ipynb   # ноутбук-лаунчер для Google Colab (clone → install → run)
 ├── .gitignore
