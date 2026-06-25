@@ -4,9 +4,9 @@
   <!-- ξ -->
   <text x="44" y="72" text-anchor="middle"
         font-family="Georgia,'DejaVu Serif',serif"
-font-style="italic" font-size="58" fill="#5BC8F5">&#950;</text>
+font-style="italic" font-size="58" fill="#FFFFFF">&#950;</text>
   <!-- superscript 2 -->
   <text x="74" y="38" text-anchor="middle"
         font-family="Georgia,'DejaVu Serif',serif"
-        font-size="26" fill="#5BC8F5">2</text>
+        font-size="26" fill="#FFFFFF">2</text>
 </svg>
