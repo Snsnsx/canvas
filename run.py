@@ -117,8 +117,6 @@ def main():
 
     args = parser.parse_args()
 
-    clone_repo()
-
     install_requirements()
 
     errors = start_server()
